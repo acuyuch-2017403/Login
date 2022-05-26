@@ -1,0 +1,70 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}
+
+
+.formulario{
+    padding: 140px;
+    background-color: chartreuse;
+}
+
+.input label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+@media(min-width:768px){
+    .container-login{
+        display: flex;
+    }
+}
+
+.logo{
+    background-image: url(../img/bannerHis2.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    flex: 0 0 calc(60%);
+    position: relative;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right,rgba(141,169,196,.5), rgba(19, 64, 116, .5) );
+}
+
+@media(min-width:768px){
+    .logo{
+        height: auto;
+        background-position: right;
+    }
+
+}
+@media(min-width:1200px){
+    .logo{
+        background-position: center;
+    }
+}
